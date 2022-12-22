@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>join</title>
+    <link rel="stylesheet" href="all.css">
+</head>
+
+<style>
+    nav{
+        margin-top: 100px;
+        background-color: chocolate;
+        height: 50px;
+    }
+
+    section{
+        margin-top: 200px;
+        
+        font-size: 15pt;
+    }
+
+    #l1 table{
+        margin-left: 300px;
+        border-style:double;
+        padding: 20px;
+    }
+    
+    .size{
+        font-size: 13pt;
+    }
+    .center{
+        text-align: center;
+    }
+
+</style>
+
+<body>
+    <div id="main">
+        <header>
+            <img src="logoIcon.PNG" width="60">
+            <h1 class="title"><a href="MainPage.html">Escape Room Service</a></h1>       
+            <form action="search" method="get">
+                <div id="search">
+                    <span>search</span>
+                    <span class="sch">
+                        <input type="text" style="background-color:rgb(218, 221, 221); width: 90px;" name="what">
+                    </span>
+                    <button type="button"><img src="돋보기.png" height="12" width="10"></button>
+                </div>
+            </form>
+            <form action="login" method="post">
+                <div id="loginMain">
+                    <table>
+                        <tr>
+                            <td><b> 아이디 </b></td>
+                            <td><input type="text" style="width: 100px;" name="id"></td>
+                        </tr>
+                        <tr>
+                            <td><b>비밀번호</b></td>
+                            <td><input type="text" style="width: 100px;" name="pwd"></td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <a href="loginChk.html">
+                                    <input type="button" style="margin-left: 25px;" value="로그인">
+                                </a>
+                            </td>
+                            <td>
+                                <a href="join.html">
+                                    <input type="button" style="margin-left: 20px;" value="회원가입">
+                                </a>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </form>
+        </header>
+
+        <nav>
+
+        </nav>
+
+        <section>
+            <form action="loginPass" method="post">
+                <div id="l1">
+                    <table>
+                        <tr>
+                            <td class="line">아이디 *</td>
+                            <td colspan="3"><input type="text" name="id"></td>
+                        </tr>
+                        <tr>
+                            <td class="line">비밀번호  *</td>
+                            <td colspan="3"><input type="password" name="pwd"></td>
+                        </tr>
+                       
+                        <tr>
+                            <td>이름  *</td>
+                            <td colspan="3"><input type="text" name="name"></td>
+                        </tr>
+                        <tr>
+                            <td>전화번호  *</td>
+                            <td><input type="text" style="width: 30px;" name="tel" value="010"></td>
+                            <td><input type="text" style="width: 50px; margin-left: -58px;" name="tel"></td>
+                            <td><input type="text" style="width: 50px; margin-left: -30px;" name="tel"></td>
+                        </tr>
+                        <tr>
+                            <td>생년월일</td>
+                            <td>
+                                <select>
+                                    <option>출생연도</option>
+                                    <option>1993</option>
+                                    <option>1992</option>
+                                    <option>1991</option>
+                                    <option>1990</option>
+                                    <option>1989</option>
+                                    <option>1988</option>
+                                </select>
+                            </td>
+                            <td>
+                                <select style="margin-left: -17px;">
+                                    <option>월</option>
+                                    <option>1</option>
+                                    <option>2</option>
+                                    <option>3</option>
+                                    <option>4</option>
+                                    <option>5</option>
+                                    <option>6</option>
+                                </select>
+                            </td>
+                            <td>
+                                <select style="margin-left: -10px;">
+                                    <option>일</option>
+                                    <option>1</option>
+                                    <option>2</option>
+                                    <option>3</option>
+                                    <option>4</option>
+                                    <option>5</option>
+                                    <option>6</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr class="size">
+                            <td colspan="2">정보 제공 서비스 알림 동의</td>
+                            <td><input type="radio" name="ok">예</td>
+                            <td><input type="radio" name="ok">아니오</td>
+                        </tr>
+                        <tr>
+                            <td colspan="4" class="center">
+                                <a href="loginPass.html"><input type="submit" name="cus" value="가입하기"></a>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </form>
+        </section>
+</body>
+</html>

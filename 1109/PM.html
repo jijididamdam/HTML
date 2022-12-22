@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form>
+        <table border="1" id="basket">
+            <tr>
+               <td>chk</td>
+               <td>번호</td>
+               <td>상품정보</td>
+               <td>옵션</td>
+               <td>상품금액</td>
+               <td>배송비</td> 
+            </tr>
+        </table>
+        <br>
+        <table border="1" id="info">
+            <tr>
+                <td>상품정보</td>
+                <td>옵션</td>
+                <td>상품금액</td>
+                <td>배송비</td>
+            </tr>
+            <tr>
+                <td><input type="text" class="input" style="width: 100px;"></td>
+                <td><input type="text" class="input" style="width: 100px;"></td>
+                <td><input type="text" class="input" style="width: 100px;"></td>
+                <td><input type="text" class="input" style="width: 100px;"></td>
+                <td><input type="button" onclick="add()" value="장바구니담기"></td>
+            </tr>
+        </table>
+        <div id="sum">
+            <input type="button" onclick="calcSum()" value="총합계산">
+        </div>
+
+    </form>
+</body>
+<script>
+    var no=1;
+    const table = document.getElementById('basket');
+    var rrow=0;
+    function add() { 
+        let getText = document.getElementsByClassName('input');
+        //rrow=(table.rows.length);
+        //rrow-=1;
+        //새로운 행 추가
+        let newRow = table.insertRow();
+        //새로운 행에 열추가
+        let newCell0 = newRow.insertCell(0);
+        let newCell1 = newRow.insertCell(1);
+        let newCell2 = newRow.insertCell(2);
+        let newCell3 = newRow.insertCell(3);
+        let newCell4 = newRow.insertCell(4);
+        let newCell5 = newRow.insertCell(5);
+        let newCell6 = newRow.insertCell(6);
+
+        //셀에 텍스트 추가
+        newCell0.innerHTML="<input type='checkbox' name='chkbox'>";
+        newCell1.innerText=no;
+        newCell2.innerText=getText[0].value;
+        newCell3.innerText=getText[1].value;
+        newCell4.innerText=getText[2].value;
+        newCell5.innerText=getText[3].value;
+        newCell6.innerHTML="<input type='button' value='삭제하기' onclick='del()'>";
+        /*document.getElementById('delBtn').onclick=(no)=>{
+            del(no);
+        }*/
+        no++;
+   }
+   del=() =>{
+    //체크박스로 삭제
+        for(let i=1; i < table.rows.length; i++) {
+            var chk = table.rows[i].cells[0].childNodes[0].checked;
+            if(chk){
+                table.deleteRow(i);
+                i--;
+            }
+        }
+        
+        /*
+        //번호로 삭제
+        for(let i=1; i < table.rows.length; i++) {
+            var chk = table.rows[i].cells[2].childNodes[0];
+            console.log(chk);
+            if(chk==name){
+            table.deleteRow(i);
+            }
+        }
+        */
+
+   }
+   function calcSum() {
+  
+  // 합계 계산
+  let sum = 0;
+  for(let i = 0; i < table.rows.length; i++)  {
+    sum += parseInt(table.rows[i].cells[4].innerHTML);
+  }
+  
+  // 합계 출력
+  document.getElementById('sum').innerText = sum;
+  
+}
+
+
+
+</script>
+</html>

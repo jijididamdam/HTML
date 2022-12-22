@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+</head>
+<body>
+    <h1 id="h1main">자바스크립트에서 제어하기 </h1>
+    <hr>
+    <ul>
+        <li class="li1"> 첫번재 </li>
+        <li class="li1"> 두번재 </li>
+        <li class="li1"> 세번재 </li>
+    </ul>
+    <div>        
+        <ul id="change">
+            <li> 첫번재 </li>    -나
+            <li> 두번재 </li>    -나
+            <li> 세번재 </li>    -나
+        </ul>
+    </div>
+    <div>
+        <!--
+        one<input type="button" name = "cc" id="ccc" onclick="document.getElementById('ccc').style.backgroundColor='green'">
+        two<input type="button" name = "cc" id="cc" onclick="document.getElementById('cc').style.backgroundColor='red'">
+        -->
+        <input type="button" name = "cc" onclick="color(this.value)" value="green">
+        <input type="button" name = "cc" onclick="color(this.value)" value="red">
+        
+    </div>
+</body>
+
+<script>
+    /*color=(c) => {
+        document.getElementById('change').style.color=c;
+    }*/
+    color=(c) => {
+        $('#change').css('color',c);
+    }
+</script>
+
+</html>

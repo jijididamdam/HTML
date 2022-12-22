@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <p>특수문자 1개 이상 & 문자 1개 이상을 입력하세요</p>
+        검색어<input type="text" id="id" name="uid"><input type="button" id="duplextChkid">
+        <span id="idinfo">
+            <input type="button" value="증복확인" onclick="idd()">    
+        </span>
+    </div>
+</body>
+
+<script>
+     /*const regExp =/^(?=.*[a-zA-z])(?=.*[$`~!@$!%.*#;:/'"^?&\\(\\)\-_=+]).{2,16}$/;
+    //const regExp = /[\{\}\[\]\/?.,;:|\)*~`!^\-_+<>@\#$%&\\\=\(\'\"]/g;
+    const re = /[^a-z]/;
+    document.getElementById("id").onchange = () =>{
+        var a = document.getElementById('id').value;
+        
+        if(a.match(regExp)&&a.match(re)){
+            document.querySelector('span').innerHTML=a;
+        } else {
+            alert('사용불가능') 
+        }
+        
+    }
+*/
+    function idChk() {
+        var regExpId = /^[a-z]+[a-z0-9]{5,19}$/g;
+        var a = document.getElementById('id').value;
+        return regExpId.test(a);
+    }
+    function idd(){
+    var dd= idChk();
+    alert(dd);
+    console.log(dd);
+}
+</script>
+
+</html>

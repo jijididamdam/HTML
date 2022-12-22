@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>escape</title>
+    <meta name="author" content="PJD">
+
+</head>
+<style>
+    *{
+	margin:0;
+	padding:0;
+    }
+    #wrap{
+	    width: 715px;
+	    margin: 0 auto;
+    }
+    #logo{
+	    float:left;
+    }
+    #submenu{
+	    width: 100px;
+	    height: 24px;
+	    float:right;
+	    margin-top: 10px;
+    }
+    #submenu ul{
+	    list-style: none;
+    }
+    #submenu ul li{
+	    float:left;
+    }
+    #submenu ul li a{
+		font-family: "맑은 고딕";
+		font-size: 10pt;
+		text-decoration:none;
+		color:#999999;
+    }
+    #submenu ul li:first-child a{
+	    padding-right: 8px;
+	    border-right: 1px solid #999999;
+    }
+    #submenu ul li:last-child a{
+	    padding-left: 8px;
+    }
+    #mainmenu{
+	    float:right;
+	    width: 500px;
+	    height: 34px;
+	    background-color:burlywood;
+    }
+    #mainmenu ul{
+	    list-style: none;
+    }
+    #mainmenu ul li{
+	    float:left;
+	    line-height:34px;
+    }
+    #mainmenu ul li a{
+	    padding-right:10px;
+	    padding-left:10px;
+	    font-family:"맑은 고딕";
+	    font-size: 12px;
+	    text-decoration:none;
+	    color:#fff;
+	    border-right: 1px solid #fff;
+    }
+    #mainmenu ul li:last-child a{
+	    border-right:none;
+    }
+    #section1{
+		clear:both;
+		height:220px;
+    }
+    #search{
+        font-size: 16px;
+	    width:210px;
+	    height: 207px;
+	    float: left;
+	    background:-ms-linear-gradient(top, #eed4a4b6 0%, #acc7d0 100%);
+	    background:-webkit-linear-gradient(top,#eed4a4b6 0%, #acc7d0 100%);
+    }
+    form{
+	    padding-top: 5px;
+	    padding-left: 5px;
+    }
+    select{
+	margin: 20px;
+    }
+    #section2{
+        clear:both;
+    }
+    #left{
+        float: left;
+    }
+    #right{
+        margin-left: 70px;
+        float: right;
+    }
+    
+    footer{
+        clear:both;
+        text-align:center;
+    }
+
+
+
+
+
+
+</style>
+
+
+
+
+<body>
+    <div id="wrap">
+        <header>
+            <div id="logo">
+                <img src="img/logo.png" height="100"width="120">
+            </div>
+            <nav>
+                <div id="submenu">
+                    <ul>
+                        <li><a href="/04.html">Login</a></li>
+                        <li><a href="#">English</a></li>
+                    </ul>
+                </div>
+                <div id="mainmenu">
+                    <ul>
+                        <li><a href="#">지점</a></li>
+                        <li><a href="#">테마</a></li>
+                        <li><a href="#">실시간예약</a></li>
+                        <li><a href="#">Q&A</a></li>
+                        <li><a href="#">FQA</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
+        <section>
+            <article id="section1">
+                <div id="search">
+                    <form>
+                        <b><p>지역 검색</p></b>
+                        <input type="checkbox" name="addr" value="강">강남점
+                        <input type="checkbox" name="addr" value="신">신논현점<br>
+                        <input type="checkbox" name="addr" value="수">수원역점
+                        <input type="checkbox" name="addr" value="인">수원인계점
+                        <hr>
+                        <b><p>테마 검색</p></b>
+                        <select>
+                            <option>테마종류</option>
+                            <option>출동</option>
+                            <option>INSERT COIN</option>
+                            <option>둘이 라면</option>
+                            <option>IMAGINE</option>
+                        </select>
+                        <hr>
+                        <b><p>키워드 검색</p></b>
+                        <input type="text" size="15">
+                        <input type="button" value="검색">
+                    </form>
+                </div>
+                <div id="main_img">
+                    <img src="img/run.gif" width="504">
+                </div>
+            </article>
+            <article id="section2">
+                <div id="left">
+                    <div class="left">
+                        <img src="img/출동.png" height="210" width="250">
+                        <form class="left">
+                            <b><p>출동</p></b>
+                            <p>[70Min]</p>
+                            <p>장르 : 코믹 & 감성</p>
+                            <p>난이도 : 3</p>
+                            <p>추천인원 : 2인~4인</p><br>
+                            <p>"좋았어! 이제 출동이닷!"</p><br>
+                            <br>
+                        </form>
+                    </div>
+                    <div class="left">
+                        <img src="img/insert coin.png" height="210" width="250">
+                        <b><p>INSERT COIN</p></b>
+                        <p>[60Min]</p>
+                        <p>장르 : 게임 & 아케이드</p>
+                        <p>난이도 : 3.5</p>
+                        <p>추천인원 : 2인~4인</p><br>
+                        <p>" ↑↑↓↓← → ← →B A "</p><br>
+                    </div>
+                </div>
+                <span id="right">
+                    <div class="right">
+                        <img src="img/둘이 라면.jpg" height="210" width="250">
+                        <b><p>둘이라면</p></b>
+                        <p>[60Min]</p>
+                        <p>장르 : 요리</p>
+                        <p>난이도 : 3</p>
+                        <p>추천인원 : 2인~4인</p><br>
+                        <p>" 둘이 먹다 하나 죽어도 모르는 라면! 이었는데..</p>
+                        <p> 요즘은 장사도 잘 안되고...뭐 좋은 아이디어 없나? "</p><br>
+                    </div>
+                    <div class="right">
+                        <img src="img/imagine.png" height="210" width="250">
+                        <b><p>IMAGINE</p></b>
+                        <p>[테스터 후 결정]</p>
+                        <p>장르 : 코믹</p>
+                        <p>난이도 : 테스터 후 결정</p>
+                        <p>추천인원 : 테스터 후 결정</p><br>
+                        <p>" What's in your head? "</p><br>
+                    </div>
+                </span>
+            </article>
+        </section>
+        <footer>
+            <p>(c)2022 Site Developed by Park</p>
+        </footer>
+
+    </div>
+
+
+</body>
+</html>

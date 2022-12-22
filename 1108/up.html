@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    #aaa{
+        color:red;
+        background-color: olive;
+    }
+    #saveWord{
+        width:200px;
+        background-color: aquamarine;
+    }
+    .delform{
+        display: inline;
+    }
+</style>
+
+<body>
+    <h1> 검색어 관리하기 </h1>
+    <input type="text" id="searchword"><input type="button" id="searchword_btn" value="검색">
+    <hr>
+    현재검색어 <h3 id="h3"> </h3>
+    <div id="saveWord">
+
+    </div>
+    <div id="searchword_list">        
+    </div>
+</body>
+<script>
+    var listdiv = document.getElementById("searchword_list");
+    var listsave = document.getElementById("saveWord");
+    var cnt=1;
+    var array = new Array();
+    document.getElementById("searchword_btn").onclick = () => {              
+        var word = document.getElementById("searchword").value;
+        var wordElm = document.createElement("div");
+        var wordList = document.createTextNode(word);
+        wordElm.appendChild(wordList);
+        listsave.innerText=wordElm;
+        /*
+        array.push(word+"\n"); 
+        listsave.innerText=array;
+        */
+        /*for(let i=0; i < array.length; i++) {
+            listsave.innerText+=array[i]+"\n";
+        }        */      
+        
+        /*listdiv.innerHTML+=word+"<form class='delform'>"+
+                                  "<input type='hidden' value="+cnt+" id='no'>"+
+                                  "<input type='button' onclick='delList(no.value)' value='delete'>"+
+                            " </form>";*/
+      //h3.innerText=word +"<span>text</span>";
+        //cnt++;
+        
+    };
+
+    function wordList(){
+        for(let i=0; i < array.length; i++) {
+            console.log(array[i]);
+        }
+    }
+
+    function delList(index){
+        alert(index);
+    }
+</script>
+</html>

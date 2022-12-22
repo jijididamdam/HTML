@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        단어<input type="text" id="txtSave">
+        <input type="button" id="putBtn" value="입력">
+    </div>
+    <div>
+        단어<input type="text" id="txtSch">
+        <input type="button" id="schBtn" value="검색">
+        <!--<input type="button" id="delBtn" value="삭제">-->
+        
+    </div>
+    <div id="list">
+        <div id="saveList">
+
+        </div>
+        <div id="schList" style="color: blueviolet;">
+
+        </div>
+    </div>
+</body>
+<script>
+    var array = new Array();
+    var lword = null;
+    document.getElementById('putBtn').onclick=() =>{
+        var word=document.getElementById('txtSave').value;
+        //var word=wword.value;
+        array.push(word); 
+        //listsave.innerText=array;
+        document.getElementById('saveList').innerText=array;
+    }
+    document.getElementById('schBtn').onclick=() =>{
+        var sword=document.getElementById('txtSch').value;
+        //console.log(sword);
+        //document.getElementById('schList').innerText='ccc';
+        for(var i=0; i<array.length; i++){
+            console.log(array[i]);
+            if(array[i]==sword){
+                alert('찾았다');
+                lword=array[i];
+                document.getElementById('schList').innerHTML=lword
+                 +"<span><input type='button' id='delBtn' value='삭제'></span>";
+                 document.getElementById('delBtn').onclick=()=>{
+                    del();
+                 }
+                return;
+            }
+        }
+        alert('못찾았다');
+    }
+    /*
+    document.getElementById('delBtn').onclick=()=>{
+        //del();
+        for(var i=0; i<array.length; i++){
+            if(array[i]==lword){
+                array.splice(i,1);
+                i--;
+                alert('삭제완료')
+            }
+            console.log(array[i]);
+        }
+        
+    }*/
+    function del(){
+        for(var i=0; i<array.length; i++){
+            if(array[i]==lword){
+                array.splice(i,1);
+                i--;
+                alert('삭제완료');
+                console.log(array[i]);
+                return;
+            }
+        }
+        alert('단어 없다');  
+        }
+
+</script>
+</html>

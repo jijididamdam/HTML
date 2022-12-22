@@ -1,0 +1,10 @@
+#table_input_form{
+    margin-top: 500px;
+    float: left;
+    width:800px;
+    height: 800;
+    text-align: center;
+    margin:0px auto;
+    padding-top: 20px;
+    background-color:chartreuse;
+}

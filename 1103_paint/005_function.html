@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+    // 기본형식
+    function add(a,b){
+        return a+b;
+    };  // 콘솔 창에 add(2,3) 이런 식으로 입력하면 해당 값 나옴 ~ 여기에는 console.log(add(2,3)) 이렇게 입력 
+
+    // 익명의 함수
+    var kkk=function(a,b){
+        return a-b;
+    };
+
+    var abc=(a,b) =>{
+        return a*b;
+    };  // console.log(abc(2,4))   매개변수 a,b 있음
+
+    var ccc=() =>{
+        return 7;
+    }; // console.log(ccc()); > 7 이 나옴    매개변수 없음
+
+    // 함수 이름이 : ddd   매개변수(a,b) {코드}  ~  익명의 함수 아님
+    ddd = (a,b) =>{
+        return a+b;
+    };
+
+    d12 = a =>{  // 매개변수가 한 개일 경우는 소괄호를 생략할 수 있다.
+        return a+30;
+    }
+
+    drawPan.addEventListener('mousemove', e=> {    // e 대신 function(a) 로 써도 가능
+        if(flag){
+            e=window.event;
+            console.log('마우스 move');
+            console.log((e.clientX-8)+"/"+(e.clientY-8));
+        }
+    });                                                       // 매개변수 ~ 콜백함수
+
+</script>
+
+
+<body>
+    
+</body>
+</html>
